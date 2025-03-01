@@ -8,9 +8,9 @@ class $modify(MyMenuLayer, MenuLayer) {
 		if (!MenuLayer::init()) return false;
 		log::info("dankmeme01 custom test mod");
 		bool state = perms::getPermissionStatus(perms::Permission::RecordAudio);
-		log::debug("Initial state: {}", state);
+		log::info("Initial state: {}", state);
 		perms::requestPermission(perms::Permission::RecordAudio, [](bool granted) {
-			log::debug("Was granted: {}", granted);
+			log::info("Was granted: {}", granted);
 		});
 		return true;
 	}
